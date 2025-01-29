@@ -8,9 +8,9 @@ public class Main {
         double avg = sc.nextDouble();
         String result;
 
-        if(avg > 1.0){
+        if(avg >= 1.0){
             result = "High";
-        }else if(avg > 0.5){
+        }else if(avg >= 0.5){
             result = "Middle";
         }else{
             result = "Low";
