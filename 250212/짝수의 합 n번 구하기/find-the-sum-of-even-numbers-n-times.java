@@ -15,6 +15,9 @@ public class Main {
                 if(a % 2 == 0){
                     sum += j;
                 }else{
+                    if(j + 1 > b){
+                        break;
+                    }
                     sum += j+1;
                 }
             }
