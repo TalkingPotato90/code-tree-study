@@ -11,14 +11,9 @@ public class Main {
             int a = sc.nextInt();
             int b = sc.nextInt();
             int sum = 0;
-            for(int j = a; j <= b; j+=2){
-                if(a % 2 == 0){
+            for(int j = a; j <= b; j++){
+                if(j % 2 == 0){
                     sum += j;
-                }else{
-                    if(j + 1 > b){
-                        break;
-                    }
-                    sum += j+1;
                 }
             }
             System.out.println(sum);
