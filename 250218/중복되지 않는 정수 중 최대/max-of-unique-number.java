@@ -13,11 +13,15 @@ public class Main {
         }
 
         for(int i = 0; i < n; i++){
+            boolean isDup = false;
             for(int j = i + 1; j < n; j++){
                 if(arr[i] == arr[j]){
-                    arr[i] = -1;
                     arr[j] = -1;
+                    isDup = true;
                 }
+            }
+            if(isDup){
+                arr[i] = -1;
             }
         }
 
