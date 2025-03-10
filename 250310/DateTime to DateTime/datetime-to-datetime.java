@@ -6,10 +6,34 @@ public class Main {
         int B = sc.nextInt();
         int C = sc.nextInt();
         // Please write your code here.
+        int startDay = 11; 
+        int startHour = 11;
+        int startMinute = 11;
 
-        int startDay = 11, startHour = 11, startMinute = 11;
+        int endDay = 11;
+        int endHour = 11;
+        int endMinute = 11;
 
-        int endDay = A, endHour = B, endMinute = C;
+        if(A >= 11){
+            endDay = A;
+        }else{
+            startDay = A;
+            endDay = 11;
+        }
+
+        if(B >= 11){
+            endHour = B;
+        }else{
+            startHour = B;
+            endHour = 11;
+        }
+
+        if(C >= 11){
+            endMinute = C;
+        }else{
+            startMinute = C;
+            endMinute = 11;
+        }
 
         int elapsedMinutes = 0;
 
