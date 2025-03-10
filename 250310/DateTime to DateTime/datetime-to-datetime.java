@@ -1,45 +1,25 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int A = sc.nextInt();
         int B = sc.nextInt();
         int C = sc.nextInt();
-        // Please write your code here.
-        int startDay = 11; 
-        int startHour = 11;
-        int startMinute = 11;
 
-        int endDay = 11;
-        int endHour = 11;
-        int endMinute = 11;
+        int startDay = 11, startHour = 11, startMinute = 11;
 
-        if(A >= 11){
-            endDay = A;
-        }else{
-            startDay = A;
-            endDay = 11;
-        }
-
-        if(B >= 11){
-            endHour = B;
-        }else{
-            startHour = B;
-            endHour = 11;
-        }
-
-        if(C >= 11){
-            endMinute = C;
-        }else{
-            startMinute = C;
-            endMinute = 11;
+        if (A < startDay || 
+            (A == startDay && B < startHour) || 
+            (A == startDay && B == startHour && C < startMinute)) {
+            System.out.println("-1");
+            return;
         }
 
         int elapsedMinutes = 0;
-
         int day = startDay, hour = startHour, minute = startMinute;
 
-        while (day < endDay || hour < endHour || minute < endMinute) {
+        while (day < A || hour < B || minute < C) {
             minute++;
             elapsedMinutes++;
 
